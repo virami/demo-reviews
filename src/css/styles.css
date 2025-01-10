@@ -1,0 +1,134 @@
+@import url('./fonts.css');
+
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+    background-color: #fbfbfb;
+    color: #0c0c0c;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input,
+  textarea {
+    font-family: inherit;
+  }
+  
+  /* Styles for Mobile devices */
+  .container {
+    min-width: 280px;
+    max-width: 335px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  /* Styles for Tablet devices */
+  @media only screen and (min-width: 768px) {
+    .container {
+      max-width: 704px;
+      padding: 0 32px;
+    }
+  }
+  /* Styles for Desktop devices */
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1150px;
+      padding: 0;
+    }
+  }
+
+  
+  .reviews-container {
+    width: 335px;
+    max-height: 262px;
+    position: relative; /* Додаємо відносне позиціонування для кнопок */
+  }
+
+  .reviews-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #0c0c0c;
+  }
+
+
+  .reviews-list { 
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth;
+    scrollbar-width: 100%;  */
+    transition: transform 0.5s ease;
+    padding: 0; 
+    margin: 0; 
+    
+  }
+  .reviews-list::-webkit-scrollbar {
+    display: none;
+}
+
+  .reviews-item {
+    background-color: #f3f3f3;
+    border-radius: 30px;
+    padding: 32px 36px;
+    min-width: 335px;  
+  }
+
+  .reviews-item-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #0c0c0c;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .reviews-item-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(12, 12, 12, 0.4);
+  }
+
+  
