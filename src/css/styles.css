@@ -1,4 +1,4 @@
-@import url('./fonts.css');
+
 
   body {
     min-width: 100vw;
@@ -74,9 +74,10 @@
 
   
   .reviews-container {
-    width: 335px;
-    max-height: 262px;
-    position: relative; /* Додаємо відносне позиціонування для кнопок */
+    position: relative; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
   }
 
   .reviews-title {
@@ -85,6 +86,7 @@
     line-height: 1;
     letter-spacing: -0.02em;
     color: #0c0c0c;
+    margin-bottom: 40px;
   }
 
 
@@ -92,23 +94,25 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
-    overflow-x: hidden;
-    /* scroll-behavior: smooth;
-    scrollbar-width: 100%;  */
+    overflow-x: auto;
+    scroll-behavior: auto;
     transition: transform 0.5s ease;
     padding: 0; 
     margin: 0; 
     
   }
-  .reviews-list::-webkit-scrollbar {
-    display: none;
-}
+ 
 
   .reviews-item {
     background-color: #f3f3f3;
     border-radius: 30px;
     padding: 32px 36px;
     min-width: 335px;  
+  }
+
+  .reviews-item img {
+   margin-left: auto;
+   margin-right: auto;
   }
 
   .reviews-item-title {
@@ -125,10 +129,52 @@
   .reviews-item-text {
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.28571;
+    line-height: 1.29;
     letter-spacing: -0.02em;
     text-align: center;
     color: rgba(12, 12, 12, 0.4);
+  }
+
+  @media screen and (min-width: 768px) {
+    .reviews-container {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .reviews-title {
+      font-size: 48px;
+    }
+
+    .reviews-list { 
+      gap: 16px;
+    }
+
+    .reviews-item {
+      min-width: 344px;  
+    }
+
+    .reviews-item-title {
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .reviews-item-text {
+      font-size: 16px;
+      line-height: 1.29;
+    }
+  
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    .reviews-list { 
+      gap: 20px;
+      overflow-x: hidden;    
+    }
+
+    .reviews-item {
+      min-width: 370px;  
+    } 
   }
 
   
